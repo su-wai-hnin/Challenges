@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+:root {
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Gray-100: hsl(0, 0%, 95%);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+body{
+    font-size: 15px;
+}
+h2{
+    font-family: "Big Shoulders", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.container{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: var(--Gray-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+    .card-container{
+        background-color: pink;
+        max-width: 800px;
+        display: grid;
+        border-radius: 0.4rem;
+        overflow: hidden;
+        @media(min-width: 768px){
+            grid-template-columns: repeat(3,1fr);
+        }
+        .card{
+            padding: 1.5rem;
+
+            &:nth-child(1){
+                background-color: var(--Gold-500);
+                button{
+                    color: var(--Gold-500);
+                }
+            }
+            &:nth-child(2){
+                background-color: var(--Cyan-800);
+                button{
+                    color: var(--Cyan-800);
+                }
+            }
+            &:nth-child(3){
+                background-color: var(--Green-950);
+                button{
+                    color: var(--Green-950);
+                }
+            }
+            img{}
+            h2{
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: var(--Gray-100);
+                margin: 1.3rem 0;
+            }
+            p{
+                color: var(--Transparent-white);
+                line-height: 1.4;
+            }
+            a{
+               @media(min-width: 768px){
+            margin-top: 4rem;
+               }
+               margin-top: 1rem;
+                display: block;
+                button{
+                    background-color: var(--Gray-100);
+                    padding: 0.8rem 1.6rem;
+                    border-radius: 30px;
+                    border: none;
+                    text-transform: capitalize;
+                    &:hover{
+                       background-color: transparent;
+                       color: var(--Gray-100);
+                     outline: 2px solid var(--Gray-100);
+                     transition-duration: 1s;
+                    }
+                    }
+                }
+            }
+        }
+    }
